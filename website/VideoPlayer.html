@@ -20,8 +20,9 @@
         }
 
         .video-container {
-            width: 90%;
-            max-width: 800px;
+            width: 100%;
+            max-width: 1920px;
+            height:100%;
         }
 
         .buttons-container {
@@ -55,20 +56,11 @@
         <video id="my-player" class="video-js vjs-fluid" controls preload="auto" data-setup='{}'>
             <source id="video-src" src="" type="video/mp4">
             </source>
-            <p class="vjs-no-js">
-                To view this video please enable JavaScript, and consider upgrading to a
-                web browser that
-                <a href="https://videojs.com/html5-video-support/" target="_blank">
-                    supports HTML5 video
-                </a>
-            </p>
+            
         </video>
     </div>
 
-    <div class="buttons-container">
-        <button class="copy-button" onclick="copyStreamUrl()">Copy Stream URL</button>
-        <button class="copy-button" onclick="copyDownloadUrl()">Copy Download URL</button>
-    </div>
+
 
     <script>
         const downloadUrl = (new URL(window.location.href)).searchParams.get('url');
